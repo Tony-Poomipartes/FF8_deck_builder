@@ -1,0 +1,16 @@
+<%- include('header') %>
+<h1><%= cardData.name %></h1>
+<h2>      level :<%= cardData.level %></h2>
+<h2>      element :<%= cardData.element %></h2>
+<div class="cardsContainer">
+  <div class="card">
+
+    <img src="/visuals/<%= cardData.visual_name %>" alt="<%= cardData.name %> illustration">
+
+    <p class="cardName"><%= cardData.name %></p>
+    <a class="link--addCard" title="Ajouter au deck" href="/deck/add/<%=cardData.id%>">[ + ]</a>
+    <a class="link--delCard" title="supprimer du deck" href="/deck/delete/<%=cardData.id%>">[ - ]</a>
+    
+  </div>
+</div>
+<%- include('footer') %>
